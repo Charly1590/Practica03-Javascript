@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../javascript/calculadora.js"></script>
+    <link   rel="stylesheet" type="text/css" href="../css/calculadora.css"/>
+    <link   rel="stylesheet" type="text/css" href="../css/estilosCalculadora.css"/>
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <div id="marco">
+        <div id="Resultados">
+            <textarea id="ingreso" rows="4" cols="79">0</textarea>
+        </div>
+        <div id="historialPos">
+            <textarea id="historial" rows="22" cols="35"></textarea>
+        </div>
+        <div id="numeros">
+            <button id="Clear" onclick="limpiar()">
+                C
+            </button>
+    
+            <button id="Division" onclick="recibir('/')">
+                /
+            </button>
+    
+            <button id="Multiplicacion" onclick="recibir('*')">
+                *
+            </button>
+    
+            <button id="Resta" onclick="recibir('-')"> 
+                -
+            </button>
+    
+            <button id="siete" onclick="recibir(7)">
+                7
+            </button>
+    
+            <button id="ocho" onclick="recibir(8)">
+                8
+            </button>
+    
+            <button id="nueve" onclick="recibir(9)">
+                9
+            </button>
+
+            <button id="suma" onclick="recibir('+')">
+                +
+            </button>
+            
+            <button id="cuatro" onclick="recibir(4)">
+                4
+            </button>
+    
+            <button id="cinco" onclick="recibir(5)">
+                5
+            </button>
+    
+            <button id="seis" onclick="recibir(6)">
+                6
+            </button>
+
+            <button id="potencia" onclick="recibir('^')">
+                ^
+            </button>
+    
+            <button id="uno" onclick="recibir(1)">
+                1
+            </button>
+    
+            <button id="dos" onclick="recibir(2)">
+                2
+            </button>
+    
+            <button id="tres" onclick="recibir(3)">
+                3
+            </button>
+
+            <button id="fact" onclick="recibir('!')">
+                !
+            </button>
+
+            <button id="cero" onclick="recibir(0)">
+                0
+            </button>
+    
+            <button id="punto" onclick="recibir('.')">
+                .
+            </button>
+
+            <button id="igual" onclick="operaciones()">
+                =
+            </button>
+
+        </div>
+        
+    </div>
+</body>
+</html>

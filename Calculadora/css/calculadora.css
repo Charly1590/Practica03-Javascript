@@ -1,0 +1,301 @@
+body{
+    background-image: url(../imagen/fondomate.jpg);
+}
+
+#siete:hover{
+    background-color:rgb(37, 128, 170);
+    border: 0px;
+}
+
+#ocho:hover{
+    background-color:rgb(37, 128, 170);
+    border: 0px;
+}
+
+#nueve:hover{
+    background-color:rgb(37, 128, 170);
+    border: 0px;
+}
+
+#cuatro:hover{
+    background-color:rgb(37, 128, 170);
+    border: 0px;
+}
+
+#cinco:hover{
+    background-color:rgb(37, 128, 170);
+    border: 0px;
+}
+
+#seis:hover{
+    background-color:rgb(37, 128, 170);
+    border: 0px;
+}
+
+#uno:hover{
+    background-color:rgb(37, 128, 170);
+    border: 0px;
+}
+
+#dos:hover{
+    background-color:rgb(37, 128, 170);
+    border: 0px;
+}
+
+#tres:hover{
+    background-color:rgb(37, 128, 170);
+    border: 0px;
+}
+
+#cero:hover{
+    background-color:rgb(37, 128, 170);
+    border: 0px;
+}
+
+#punto:hover{
+    background-color:rgb(37, 128, 170);
+    border: 0px;
+}
+
+div#marco{
+    margin-top: 5%;
+    margin-left: 25%;
+    width: 600px;
+    height: 450px;
+    background-color:gray;
+}
+
+div#numeros{
+    margin-top: 5%;
+    margin-left: 2%;
+    width: 50%;
+    height: 80%;
+}
+
+div#historialPos{
+    float: right;
+    margin-top: 5%;
+    margin-right: 2%;
+    width: 270px;
+    height: 370px;
+}
+
+div#Resultados{
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 577px;
+    height: 60px;
+    background-color:darkgray;
+}
+
+#Clear{
+    float: left;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 60px;
+    height: 60px;
+    border: 0px;
+    background-color:rgb(21, 121, 121);
+}
+
+#Clear:hover{
+    background-color:rgb(34, 180, 180) !important;
+}
+
+#Division{
+    float: left;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+    border: 0px;
+    background-color:rgb(21, 121, 121);
+}
+
+#Division:hover{
+    background-color:rgb(34, 180, 180) !important;
+}
+
+#Multiplicacion{
+    float: left;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+    border: 0px;
+    background-color:rgb(21, 121, 121);
+}
+
+#Multiplicacion:hover{
+    background-color:rgb(34, 180, 180) !important;
+}
+
+#Resta{
+    float: left;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+    border: 0px;
+    background-color:rgb(21, 121, 121);
+}
+
+#Resta:hover{
+    background-color:rgb(34, 180, 180) !important;
+}
+
+#siete{
+    float: left;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 60px;
+    height: 60px;
+    background-color:white;
+}
+
+#ocho{
+    float: left;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+    background-color:white;
+}
+
+#nueve{
+    float: left;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+    background-color:white;
+}
+
+
+#suma{
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+    border: 0px;
+    background-color:rgb(21, 121, 121);
+}
+
+#suma:hover{
+    background-color:rgb(34, 180, 180) !important;
+}
+
+#cuatro{
+    float: left;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 60px;
+    height: 60px;
+    background-color:white;
+}
+
+#cinco{
+    float: left;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+    background-color:white;
+}
+
+#seis{
+    float: left;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+    background-color:white;
+}
+
+#igual{
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+    border: 0px;
+    background-color:rgb(21, 121, 121);
+}
+
+#igual:hover{
+    background-color:rgb(34, 180, 180) !important;
+}
+
+#uno{
+    float: left;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 60px;
+    height: 60px;
+    background-color:white;
+}
+
+#dos{
+    float: left;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+    background-color:white;
+}
+
+#tres{
+    float: left;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+    background-color:white;
+}
+
+#fact{
+    float: left;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+    border: 0px;
+    background-color:rgb(21, 121, 121);
+}
+
+#fact:hover{
+    background-color:rgb(34, 180, 180) !important;
+}
+
+#cero{
+    float: left;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 140px;
+    height: 60px;
+    background-color:white;
+}
+
+#punto{
+    float: left;
+    margin-top: 2%;
+    margin-left: 3%;
+    width: 60px;
+    height: 60px;
+    font-size: larger;
+    background-color:white;
+}
+
+
+#potencia{
+    float: left;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+    border: 0px;
+    background-color:rgb(21, 121, 121);
+}
+
+#potencia:hover{
+    background-color:rgb(34, 180, 180) !important;
+}
