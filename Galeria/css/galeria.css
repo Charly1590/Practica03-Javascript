@@ -1,0 +1,56 @@
+body{
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url(../imagenes/fondo.jpg);
+}
+
+
+
+div#ima{
+    float: left;
+    /*background-color: white;*/
+    width: 600px;
+    height: 300px;
+    margin-left: 31%;
+    margin-top: 10%;
+    margin-bottom: 1%;
+    overflow: hidden
+}
+
+#salida{  
+    position: absolute;
+    text-align: center; 
+}
+
+
+#entrada{ 
+    position: absolute;
+    text-align: center; 
+}
+
+
+#img{
+    width: 500px;
+    height: 300px;
+}
+
+#img2{
+    width: 500px;
+    height: 300px;
+}
+
+div#botones{
+    clear: both;
+    width: 500px;
+    height: 80px;
+    margin-left: 31%;
+    margin-top: 10%;
+}
+
+.btn{
+    background-color: rgb(196, 64, 64);
+    border: 0%;
+    height: 100%;
+    width: 32.7%;
+    font-size: larger;
+}
