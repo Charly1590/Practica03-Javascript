@@ -80,8 +80,8 @@ function derecha(){
         cont2=0;
         cont1=100;
         pos2=826;
-        console.log(rand[fotoEntra]+1);
-        console.log(rand[numImage]+1);
+        //console.log(rand[fotoEntra]+1);
+        //console.log(rand[numImage]+1);
         if(numImage==0){
             console.log("aaaaa");
             divSal.style.opacity=1;
