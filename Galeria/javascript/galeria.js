@@ -1,16 +1,11 @@
 
 var numImage=0;
 var fotoEntra=0;
-var transi=0;
 var cont1=100;
 var cont2=0;
-var tam1=0;
-var tam2=100;
 var pos1=0;
 var pos2=926;
-var pos3=0;
-var a=0;
-var b=0;
+var pos3=100;
 var aux;
 var imagen=["../imagenes/img1.jpg","../imagenes/img2.jpg","../imagenes/img3.jpg","../imagenes/img4.jpg","../imagenes/img5.jpg","../imagenes/img6.jpg","../imagenes/img7.jpg","../imagenes/img8.jpg","../imagenes/img9.jpg","../imagenes/img10.jpg"];
 var rand = [];
@@ -50,8 +45,8 @@ function inicio(){
     var imgEnt=document.images["entrante"];
     var imgSal=document.images["saliente"];
     random();
-    imgSal.src=imagen[rand[0]];
-    imgEnt.src=imagen[rand[1]];
+    imgSal.src=imagen[rand[1]];
+    imgEnt.src=imagen[rand[0]];
     console.log("inicio");
 }
 
@@ -73,14 +68,12 @@ function derecha(){
     if(pos2<425){
         pos2=425;
     }
+    divEnt.style.opacity="0."+cont1;
+    divSal.style.opacity="0."+cont2;
     if(numImage==0){
-        divEnt.style.opacity="0."+cont1;
-        divSal.style.opacity="0."+cont2;
         divSal.style.left=pos2+"px";
     }
     else{
-        divEnt.style.opacity="0."+cont1;
-        divSal.style.opacity="0."+cont2;
         divEnt.style.left=pos2+"px";
     }
     if(cont1==0){
@@ -136,20 +129,18 @@ function izquierda(){
     if(pos3>425){
         pos3=425;
     }
+    divEnt.style.opacity="0."+cont1;
+    divSal.style.opacity="0."+cont2;
     if(numImage==0){
-        divEnt.style.opacity="0."+cont1;
-        divSal.style.opacity="0."+cont2;
         divSal.style.left=pos3+"px";
     }
     else{
-        divEnt.style.opacity="0."+cont1;
-        divSal.style.opacity="0."+cont2;
         divEnt.style.left=pos3+"px";
     }
     if(cont1==0){
         cont2=0;
         cont1=100;
-        pos3=0;
+        pos3=100;
         console.log(rand[fotoEntra]+1);
         console.log(rand[numImage]+1);
         console.log("cccc");

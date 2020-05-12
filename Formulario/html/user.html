@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link   rel="stylesheet" type="text/css" href="../cssUser/user.css"/>
+    <link   rel="stylesheet" type="text/css" href="../cssUser/estilosUser.css"/>
+    <script type="text/javascript" src="../JavaScript/validaciones.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div id="centro">
+        <form >
+            <div id="texto">
+                <div class="inputP">
+                    <label id="text">Cedula:</label>
+                    <br>
+                    <input type="text" id="Cedula" size="30" onkeyup="validarTamano()" onblur="validarCedula()">
+                    <br>
+                    <span id="msjCedula" class="error"></span>
+                </div>
+                
+                <div class="inputP">
+                    <label id="text">Nombres:</label>
+                    <input type="text" id="Nombre" size="30" onblur="validarNombres()">
+                    <br>
+                    <span id="msjNombres" class="error"></span>
+                </div>
+               
+                <div class="inputP">
+                    <label id="text">Apellido:</label>
+                    <input type="text" id="Apellido" size="30" onblur="validarApellidos()">
+                    <br>
+                    <span id="msjApellido" class="error"></span>
+                </div>
+                
+                <div class="inputP">
+                    <label id="text">Direccion:</label>
+                    <input type="text" id="Direccion" size="30">
+                    <br>
+                    <span id="msjDireccion" class="error"></span>
+                </div>
+                
+                <div class="inputP">
+                    <label id="text">Telefono:</label>
+                    <input type="text" id="Telefono" size="30" onkeyup="validarTlf()" onblur="validarLongTel()">
+                    <br>
+                    <span id="msjTelefono" class="error"></span>
+                </div>
+                
+                <div class="inputP">
+                    <label id="text">Fecha de nacimiento:</label>
+                    <input type="text" id="Fecha" size="30" onkeyup="validarFecha()">
+                    <br>
+                    <span id="msjFecha" class="error"></span>
+                </div>
+                
+                <div class="inputP">
+                    <label id="text">Correo:</label>
+                    <input type="email" id="Correo" size="30" onblur="validarCorreo()">
+                    <br>
+                    <span id="msjCorreo" class="error"></span>
+                </div>
+               
+                <div class="inputP">
+                    <label id="text">Password:</label>
+                    <input type="password" id="password" size="30" onblur="validarPassword()">
+                    <br>
+                    <span id="msjPassword" class="error"></span>
+                </div>
+               <div id="btnlog">
+                    <input class="btnLog" type="submit" value="Registrarse">
+               </div>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
