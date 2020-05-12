@@ -2,4 +2,4 @@
 
 ### Diseñar una interfaz en HTML que permita ingresar los siguientes campos en un formulario: cedula, nombres, apellidos, dirección, teléfono, fecha de nacimiento, correo electrónico y contraseña. Luego, usando funciones de JavaScript se pide validar que todos los campos han sido ingresados, además; que los valores ingresados en cada campo del formulario sean correctos teniendo en cuenta las siguientes condiciones: 
 
-![1](/imagenesParaReadmi/1.jpg?raw=true "Title")
+![1](/ImagenesParaReadmi/1.jpg?raw=true "Title")
