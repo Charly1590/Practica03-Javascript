@@ -1,3 +1,37 @@
+var bandera;
+var c=0;
+var n=0;
+var a=0;
+var d=0;
+var t=0;
+var f=0;
+var co=0;
+var p=0;
+function validarForm(){
+    if(c != 0 && n!=0 && a!=0 && d!=0 && t!=0 && f!=0 && co!=0 && p!=0){
+        return bandera=true;
+    }
+    else{
+        return bandera=false;
+    }
+}
+
+function validarDireccion(){
+    var dir=document.getElementById("Direccion").value;
+    console.log("sadasd");
+    if(dir==""){
+        document.getElementById("msjDireccion").innerHTML="Tiene que ingresar una direccion";
+        document.getElementById("msjDireccion").style.color="red";
+        document.getElementById("Direccion").style.borderColor="red";
+        d=0;
+    }
+    else{
+        document.getElementById("msjDireccion").innerHTML="";
+        document.getElementById("Direccion").style.borderColor="black";
+        d=1;
+    }   
+}
+
 function validarTamano(){
     var ced=document.getElementById("Cedula").value;
     var cedlong=ced.length;
@@ -5,7 +39,12 @@ function validarTamano(){
     if(cedlong > 10){
         document.getElementById("Cedula").value=ced.slice(0,10);
     }
-
+    if (ced==""){
+        document.getElementById("msjCedula").innerHTML='La longitud de la cedula no es correcta';
+        document.getElementById("msjCedula").style.color="red";
+        document.getElementById("Cedula").style.borderColor="red";
+        c=0;
+    }
     if(cedlong===10){
         document.getElementById("msjCedula").innerHTML='';
         document.getElementById("Cedula").style.borderColor="black";
@@ -23,6 +62,7 @@ function validarCedula(){
         document.getElementById("msjCedula").innerHTML='La longitud de la cedula no es correcta';
         document.getElementById("msjCedula").style.color="red";
         document.getElementById("Cedula").style.borderColor="red";
+        c=0;
     }
     else{
         numced=0;
@@ -48,47 +88,62 @@ function validarCedula(){
         var resultado = decSup-cont;
 
         if(resultado != ultimo){
+            document.getElementById("Cedula").style.borderColor="red";
             document.getElementById("msjCedula").innerHTML="La cedula es incorrecta";
             document.getElementById("msjCedula").style.color="red";
+            c=0;
         }
         else{
             document.getElementById("msjCedula").innerHTML="";
+            document.getElementById("Cedula").style.borderColor="black";
+            c=1;
         }
     }
 }
 
+function valLeNom(){
+    validarLetras(document.getElementById("Nombre"));
+}
+
 function validarNombres(){
     var nombres=document.getElementById("Nombre").value;
-    validarLetras(document.getElementById("Nombre"));
+    //validarNumero(document.getElementById("Nombre"));
     var spNom=nombres.split(" ");
     var nom1=spNom[0];
     var nom2=spNom[1];
     if(nom1 != "" && nom2 != "" && spNom.length==2){
         document.getElementById("msjNombres").innerHTML="";
         document.getElementById("Nombre").style.borderColor="black";
+        n=1;
     }
     else{
         document.getElementById("msjNombres").innerHTML="Se deben ingresar dos nombres";
         document.getElementById("msjNombres").style.color="red";
         document.getElementById("Nombre").style.borderColor="red";
+        n=0;
     }
 }
 
+function valApeLe(){
+    validarLetras(document.getElementById("Apellido"));
+}
 
 function validarApellidos(){
     var nombres=document.getElementById("Apellido").value;
-    validarLetras(document.getElementById("Apellido"));
+    //validarLetras(document.getElementById("Apellido"));
     var spNom=nombres.split(" ");
     var ape1=spNom[0];
     var ape2=spNom[1];
     if(ape1 != "" && ape2 != "" && spNom.length==2){
         document.getElementById("msjApellido").innerHTML="";
         document.getElementById("Apellido").style.borderColor="black";
+        a=1;
     }
     else{
         document.getElementById("msjApellido").innerHTML="Se deben ingresar dos apellidos";
         document.getElementById("msjApellido").style.color="red";
         document.getElementById("Apellido").style.borderColor="red";
+        a=0;
     }
 }
 
@@ -109,10 +164,12 @@ function validarLongTel(){
         document.getElementById("Telefono").style.borderColor="red";
         document.getElementById("msjTelefono").innerHTML="el numero debe contener 10 digitos"
         document.getElementById("msjTelefono").style.color="red";
+        t=0;
     }
     else{
         document.getElementById("Telefono").style.borderColor="black";
         document.getElementById("msjTelefono").innerHTML=""
+        t=1;
     }
 }
 
@@ -129,12 +186,14 @@ function validarFecha(){
             document.getElementById("Fecha").borderColor="red";
             document.getElementById("msjFecha").innerHTML="recuerde que el dia tiene que ser con dos digitos y tiene que ser entre 01 - 31";
             document.getElementById("msjFecha").style.color="red";
+            f=0;
         }
         else if(mes > 12 || mes < 0 || mes === "00" || fecha.charAt(4)==="/"){
             document.getElementById("Fecha").value=dia+"/";
-            document.getElementById("Fecha").borderColor="red";
+            document.getElementById("Fecha").style.borderColor="red";
             document.getElementById("msjFecha").innerHTML="recuerde que el mes tiene que ser con dos digitos y tiene que ser entre 01 - 12";
             document.getElementById("msjFecha").style.color="red";
+            f=0;
         }
         /*else{
             document.getElementById("Fecha").borderColor="black";
@@ -143,22 +202,42 @@ function validarFecha(){
         if(fecha.length > 6){
             if(year > 2020 || (fecha.slice(6,10) < 1920 && fecha.slice(6,10).length==4)){
                 document.getElementById("Fecha").value=dia+"/"+mes+"/";
-                document.getElementById("Fecha").borderColor="red";
+                document.getElementById("Fecha").style.borderColor="red";
                 document.getElementById("msjFecha").innerHTML="recuerde que el año tiene que ser con cuatro digitos y tiene que ser entre 1920 - 2020";
                 document.getElementById("msjFecha").style.color="red";
+                f=0;
+            }
+            else if(fecha.slice(6,fecha.length).length<4){
+                document.getElementById("Fecha").style.borderColor="red";
+                document.getElementById("msjFecha").innerHTML="recuerde que el año tiene que ser con cuatro digitos y tiene que ser entre 1920 - 2020";
+                document.getElementById("msjFecha").style.color="red";
+                f=0;
             }
             else{
-                document.getElementById("Fecha").borderColor="black";
+                document.getElementById("Fecha").style.borderColor="black";
                 document.getElementById("msjFecha").innerHTML="";
+                f=1;
             }
         }
+    }
+    else{
+        document.getElementById("Fecha").style.borderColor="red";
+        document.getElementById("msjFecha").innerHTML="este campo es obligatorio";
+        document.getElementById("msjFecha").style.color="red";
+        f=0;
     }
 }
 
 function validarCorreo(){
     var correo=document.getElementById("Correo").value;
     var corrLong=correo.length;
-    if(corrLong>3){
+    if(correo == ""){
+        document.getElementById("Correo").style.borderColor="red";
+        document.getElementById("msjCorreo").innerHTML="este campo es obligatorio";
+        document.getElementById("msjCorreo").style.color="red";
+        co=0;
+    }
+    else if(corrLong>3){
         var sepcorr=correo.split("@");
         var antes=sepcorr[0];
         var despues=sepcorr[1];
@@ -169,16 +248,19 @@ function validarCorreo(){
                     document.getElementById("Correo").style.borderColor="red";
                     document.getElementById("msjCorreo").innerHTML="error en la extencion,las extenciones admitidas son ups.edu.ec y est.ups.edu.ec";
                     document.getElementById("msjCorreo").style.color="red";
+                    co=0;
                 }
                 else{
                     document.getElementById("Correo").style.borderColor="black";
                     document.getElementById("msjCorreo").innerHTML="";
+                    co=1;
                 } 
         }
         else{
             document.getElementById("Correo").style.borderColor="red";
             document.getElementById("msjCorreo").innerHTML="error el correo tiene que tener minimo tres valores alfanumericos";
             document.getElementById("msjCorreo").style.color="red";
+            co=0;
         }
     }
 }
@@ -209,17 +291,20 @@ function validarPassword(){
         if(mayus==1 && minus==1 && carEsp==1){
             document.getElementById("password").style.borderColor="black";
             document.getElementById("msjPassword").innerHTML="";
+            p=1;
         }
         else{
             document.getElementById("password").style.borderColor="red";
             document.getElementById("msjPassword").innerHTML="la contraseña debe tener almenos: una letra mayúscula, una letra minúscula y un carácter especial (@, _, $)";
             document.getElementById("msjPassword").style.color="red";
+            p=0;
         }
     }
     else{
         document.getElementById("password").style.borderColor="red";
         document.getElementById("msjPassword").innerHTML="La longitud tiene que ser minimo de 8 caracteres";
         document.getElementById("msjPassword").style.color="red";
+        p=0;
     }
 }
 
@@ -240,7 +325,7 @@ function validarNumero(elemento){
 function validarLetras(elemento){
     if(elemento.value.length > 0){
         var miAscii = elemento.value.charCodeAt(elemento.value.length-1)
-    if((miAscii >= 97 && miAscii <= 122) || (miAscii >= 65 && miAscii <= 90) ){
+    if((miAscii >= 97 && miAscii <= 122) || (miAscii >= 65 && miAscii <= 90) || miAscii==32 ){
         return true
     }else {
         elemento.value = elemento.value.substring(0, elemento.value.length-1)

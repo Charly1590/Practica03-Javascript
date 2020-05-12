@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="centro">
-        <form >
+        <form  action="../php/validacion.php" onsubmit="return validarForm()">
             <div id="texto">
                 <div class="inputP">
                     <label id="text">Cedula:</label>
@@ -22,21 +22,21 @@
                 
                 <div class="inputP">
                     <label id="text">Nombres:</label>
-                    <input type="text" id="Nombre" size="30" onblur="validarNombres()">
+                    <input type="text" id="Nombre" size="30" onblur="validarNombres()" onkeyup="valLeNom()">
                     <br>
                     <span id="msjNombres" class="error"></span>
                 </div>
                
                 <div class="inputP">
                     <label id="text">Apellido:</label>
-                    <input type="text" id="Apellido" size="30" onblur="validarApellidos()">
+                    <input type="text" id="Apellido" size="30" onblur="validarApellidos()" onkeyup="valApeLe()">
                     <br>
                     <span id="msjApellido" class="error"></span>
                 </div>
                 
                 <div class="inputP">
                     <label id="text">Direccion:</label>
-                    <input type="text" id="Direccion" size="30">
+                    <input type="text" id="Direccion" size="30" onblur="validarDireccion()">
                     <br>
                     <span id="msjDireccion" class="error"></span>
                 </div>
@@ -57,7 +57,7 @@
                 
                 <div class="inputP">
                     <label id="text">Correo:</label>
-                    <input type="email" id="Correo" size="30" onblur="validarCorreo()">
+                    <input type="text" id="Correo" size="30" onblur="validarCorreo()">
                     <br>
                     <span id="msjCorreo" class="error"></span>
                 </div>
@@ -69,7 +69,9 @@
                     <span id="msjPassword" class="error"></span>
                 </div>
                <div id="btnlog">
-                    <input class="btnLog" type="submit" value="Registrarse">
+                    <input class="btnLog" type="submit" value="Registrarse" onclick="validarPassword();
+                    validarCorreo();validarFecha();validarTlf();validarDireccion();validarApellidos();
+                    validarNombres();validarTamano()">
                </div>
             </div>
         </form>

@@ -10,6 +10,7 @@ function recibir(n){
 
 function limpiar (){
     document.getElementById("ingreso").value=0;
+    document.getElementById("historial").value="";
 }
 
 function operaciones(){
